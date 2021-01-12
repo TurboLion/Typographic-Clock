@@ -48,19 +48,27 @@ window.onload = function () {
 
 // See: https://docs.wallpaperengine.io/en/web/api/propertylistener.html
 window.wallpaperPropertyListener = {
+  setPaused: function (isPaused) {
+    settings.isPaused = isPaused;
+
+    if (!settings.isPaused) {
+      start();
+    }
+  },
   applyGeneralProperties: function (properties) {
     if (properties.fps) {
       settings.fps = properties.fps;
     }
   },
   applyUserProperties: function (properties) {
-    if (properties.isLightTheme) {
-      settings.isLightTheme = properties.isLightTheme;
+    
+    if (properties.islighttheme) {
+      settings.isLightTheme = properties.islighttheme.value;
       setLightTheme(settings.isLightTheme);
     }
-    if (properties.highlightColor) {
+    if (properties.schemecolor) {
       // Convert the custom color to 0 - 255 range for CSS usage
-      const highlightColor = properties.highlightColor.value
+      const highlightColor = properties.schemecolor.value
         .split(" ")
         .map(function (color) {
           return Math.ceil(color * 255);
@@ -68,13 +76,6 @@ window.wallpaperPropertyListener = {
 
       settings.highlightColor = `rgb(${highlightColor})`;
       setHighlightColor(settings.highlightColor);
-    }
-  },
-  setPaused: function (isPaused) {
-    settings.isPaused = isPaused;
-
-    if (!settings.isPaused) {
-      start();
     }
   },
 };
