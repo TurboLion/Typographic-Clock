@@ -55,17 +55,19 @@ window.wallpaperPropertyListener = {
       start();
     }
   },
+
   applyGeneralProperties: function (properties) {
     if (properties.fps) {
       settings.fps = properties.fps;
     }
   },
+
   applyUserProperties: function (properties) {
-    
     if (properties.islighttheme) {
       settings.isLightTheme = properties.islighttheme.value;
       setLightTheme(settings.isLightTheme);
     }
+
     if (properties.schemecolor) {
       // Convert the custom color to 0 - 255 range for CSS usage
       const highlightColor = properties.schemecolor.value
