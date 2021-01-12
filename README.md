@@ -3,4 +3,7 @@ Web Wallpaper for [Wallpaper Engine](https://store.steampowered.com/app/431960/W
 
 Available for subscription in the (Workshop)[https://steamcommunity.com/sharedfiles/filedetails/?id=2359682428]
 
+Preview:  
+![Preview](./2200.gif)
+
 Based on [Time Series 2: Typographic Clock](https://codepen.io/graphilla/pen/zEZKpN) by [Peter Norton](https://codepen.io/graphilla)
