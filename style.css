@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Cutive Mono";
+  src: url("CutiveMono-Regular.ttf") format("truetype");
+}
+
+body {
+  --highlight-color: #f57c00; /* Orange 700 */
+  align-items: center;
+  background: #212121; /* Grey 900 */
+  display: flex;
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  transition: 0.4s;
+  width: 100vw;
+}
+
+.clock {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100px;
+  position: relative;
+  width: 280px;
+}
+
+.block {
+  color: #424242; /* Grey 800 */
+  height: 20%;
+  transition: 0.4s;
+  width: calc(100% / 12);
+}
+.block.active:before {
+  color: #eeeeee; /* Grey 200 */
+  font-weight: 700;
+}
+.block.highlight:before {
+  color: #f57c00; /* Orange 700 */
+  color: var(--highlight-color);
+}
+.block:not(:nth-child(n + 16)):nth-child(n + 11),
+.block:not(:nth-child(n + 46)):nth-child(n + 41) {
+  margin-right: 10px;
+}
+.block:not(:nth-child(n + 31)):nth-child(n + 26) {
+  margin-right: 20px;
+}
+.block:nth-child(-n + 10):before {
+  content: "0" attr(data-num);
+}
+.block:before {
+  content: attr(data-num);
+  display: block;
+  font-size: 16px;
+  height: 100%;
+  line-height: 20px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.divider {
+  background: #424242; /* Grey 800 */
+  height: 60%;
+  left: calc(50% + 19px);
+  position: absolute;
+  top: 20%;
+  width: 2px;
+}
+
+body.light-theme {
+  background: #e0e0e0; /* Grey 300 */
+}
+body.light-theme .block {
+  color: #bdbdbd; /* Grey 400 */
+}
+body.light-theme .block.active:before {
+  color: #424242; /* Grey 800 */
+}
+body.light-theme .block.highlight:before {
+  color: #f57c00; /* Orange 700 */
+  color: var(--highlight-color);
+}
+body.light-theme .divider {
+  background: #bdbdbd; /* Grey 400 */
+}
