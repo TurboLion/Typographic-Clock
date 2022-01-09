@@ -4,6 +4,7 @@ const settings = {
   fps: 0,
   isLightTheme: false,
   highlightColor: "#f57c00", // Orange 700
+  scale:100
 };
 
 // Matrix for numbers in a 3x5 grid
@@ -78,6 +79,10 @@ window.wallpaperPropertyListener = {
 
       settings.highlightColor = `rgb(${highlightColor})`;
       setHighlightColor(settings.highlightColor);
+    }
+
+    if(properties.scale){
+      document.body.style.transform = 'scale(' + properties.scale.value/100 + ')';
     }
   },
 };
