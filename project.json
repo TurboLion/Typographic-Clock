@@ -18,13 +18,13 @@
         "value": "0.9607843137254902 0.48627450980392156 0"
       },
       "scale": {
-				"order": 0,
-				"text": "Scale",
-				"type": "slider",
-				"value": 100,
-				"min":10,
-				"max":300
-			}
+        "order": 0,
+        "text": "Scale",
+        "type": "slider",
+        "value": 100,
+        "min": 10,
+        "max": 300
+      }
     }
   },
   "preview": "preview.jpg",
