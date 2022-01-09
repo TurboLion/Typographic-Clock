@@ -1,6 +1,6 @@
 {
   "contentrating": "Everyone",
-  "description": "Typographic Clock\n\nIt has a light theme available and the color is configurable!\n\nBased on: \"Time Series 2: Typographic Clock\" (https://codepen.io/graphilla/pen/zEZKpN)\nby Peter Norton (https://codepen.io/graphilla)\n\nSource repo: https://github.com/TurboLion/Typographic-Clock",
+  "description": "Typographic Clock\r\n\r\nIt has a light theme available and the color is configurable!\r\n\r\nBased on: \"Time Series 2: Typographic Clock\" by Peter Norton - https://codepen.io/graphilla/pen/zEZKpN\r\n\r\nSource code: https://github.com/TurboLion/Typographic-Clock",
   "file": "index.html",
   "general": {
     "properties": {
@@ -11,26 +11,28 @@
         "type": "bool",
         "value": false
       },
+      "scale": {
+        "fraction": false,
+        "index": 1,
+        "max": 300,
+        "min": 10,
+        "order": 101,
+        "text": "Scale",
+        "type": "slider",
+        "value": 100
+      },
       "schemecolor": {
         "order": 0,
         "text": "ui_browse_properties_scheme_color",
         "type": "color",
         "value": "0.9607843137254902 0.48627450980392156 0"
-      },
-      "scale": {
-        "order": 0,
-        "text": "Scale",
-        "type": "slider",
-        "value": 100,
-        "min": 10,
-        "max": 300
       }
     }
   },
   "preview": "preview.jpg",
   "tags": ["Technology"],
   "title": "Typographic Clock",
-  "type": "web",
+  "type": "Web",
   "version": 3,
   "visibility": "public",
   "workshopid": "2359682428",
